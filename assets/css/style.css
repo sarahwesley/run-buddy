@@ -61,13 +61,14 @@ section {
 
 /* hero style start */
 .hero {
-    background-image: url("../images/hero-bg.jpeg");
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-image: url("../images/hero-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+   
     
 }
 
@@ -86,7 +87,7 @@ section {
 }
 
 .hero-form p {
-    margin 5px 0 15px 0;
+    margin: 5px 0 15px 0;
 }
 
 .hero-cta {
@@ -143,10 +144,11 @@ section {
 }
 
 
-.step h3{
+.step h3 {
+    flex: 1 30%;
     color: #024e76;
     font-size: 46px;
-    flex: 1 30%;
+    
     
 }
 
@@ -183,14 +185,15 @@ section {
 
 
 .step {
-    margin: 50px auto;
-    padding-bottom: 50px;
-    width: 80%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+  
 }
 
 
@@ -213,19 +216,18 @@ section {
 }
 
 .trainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: flex;
-    justify-content: space-around;
-    
 }
 
 .trainer {
+    flex: 1;
     margin: 20px;
     background: #024e76;
-    color: #fce138;
-    flex: 1;
+    color: #fce138;   
 }
 
 .trainer img {
@@ -358,14 +360,107 @@ footer a {
 }
 
 @media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
 
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-cta, .hero-form {
+        width: 100%;
+    }
+
+    .hero-cta {
+        text-align: center;
+    }
+
+    .section-title {
+        width: 80%;
+    }
+
+    .trainer {
+        flex: 0 70%;
+    }
+
+    .contact-info iframe {
+        flex: 1 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
 
+    .step h3 {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .step-info {
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .step-img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step-text {
+        flex: 100%;
+    }
 }
 
 @media screen and (max-width: 575px) {
+    .hero-form button {
+        width: 100%;
+    }
     
+    .section-title {
+        width: 95%;
+    }
+    
+    .intro p {
+        width: 100%;
+    }
+
+    .trainer {
+        flex: 0 100%;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info > * {
+        flex: 0 100%;
+    }
+
+    .contact-form {
+        order: 3;
+    }
 }
 
